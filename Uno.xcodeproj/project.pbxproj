@@ -32,6 +32,7 @@
 		8E23F429253C803200AA4893 /* PlayersGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F428253C803200AA4893 /* PlayersGeneratorTests.swift */; };
 		8E46A19A256214BC00431DCE /* UIColor+CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46A199256214BC00431DCE /* UIColor+CardTests.swift */; };
 		8E46A19E2562257900431DCE /* GameCanPlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46A19D2562257900431DCE /* GameCanPlayTests.swift */; };
+		8E46A1A2256230F100431DCE /* GamePlayCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46A1A1256230F100431DCE /* GamePlayCardTests.swift */; };
 		8EB336DD2552ED45009E80E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336DC2552ED45009E80E8 /* Constants.swift */; };
 		8EB336E125539623009E80E8 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336E025539623009E80E8 /* CardNode.swift */; };
 		8EB336E5255EC285009E80E8 /* WildCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336E4255EC285009E80E8 /* WildCard.swift */; };
@@ -79,6 +80,7 @@
 		8E23F428253C803200AA4893 /* PlayersGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersGeneratorTests.swift; sourceTree = "<group>"; };
 		8E46A199256214BC00431DCE /* UIColor+CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CardTests.swift"; sourceTree = "<group>"; };
 		8E46A19D2562257900431DCE /* GameCanPlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCanPlayTests.swift; sourceTree = "<group>"; };
+		8E46A1A1256230F100431DCE /* GamePlayCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayCardTests.swift; sourceTree = "<group>"; };
 		8EB336DC2552ED45009E80E8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8EB336E025539623009E80E8 /* CardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNode.swift; sourceTree = "<group>"; };
 		8EB336E4255EC285009E80E8 /* WildCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildCard.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				8E23F407253BC6A700AA4893 /* CardTests.swift */,
 				8E031ADA2550787D00871DAF /* GameTests.swift */,
 				8E46A19D2562257900431DCE /* GameCanPlayTests.swift */,
+				8E46A1A1256230F100431DCE /* GamePlayCardTests.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				8E23F411253BC82F00AA4893 /* DeckGeneratorTests.swift in Sources */,
 				8E23F3A1253BC07400AA4893 /* UnoTests.swift in Sources */,
 				8E23F408253BC6A700AA4893 /* CardTests.swift in Sources */,
+				8E46A1A2256230F100431DCE /* GamePlayCardTests.swift in Sources */,
 				8E46A19E2562257900431DCE /* GameCanPlayTests.swift in Sources */,
 				8E031ADB2550787D00871DAF /* GameTests.swift in Sources */,
 			);
