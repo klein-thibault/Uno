@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E031AD62550742400871DAF /* Array+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E031AD52550742400871DAF /* Array+Cards.swift */; };
+		8E031ADB2550787D00871DAF /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E031ADA2550787D00871DAF /* GameTests.swift */; };
+		8E031AE025507B6F00871DAF /* DeckGeneratorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E031ADF25507B6F00871DAF /* DeckGeneratorHelper.swift */; };
+		8E23F389253BC07300AA4893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F388253BC07300AA4893 /* AppDelegate.swift */; };
+		8E23F38B253BC07300AA4893 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E23F38A253BC07300AA4893 /* GameScene.sks */; };
+		8E23F38D253BC07300AA4893 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E23F38C253BC07300AA4893 /* Actions.sks */; };
+		8E23F38F253BC07300AA4893 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F38E253BC07300AA4893 /* GameScene.swift */; };
+		8E23F391253BC07300AA4893 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F390253BC07300AA4893 /* GameViewController.swift */; };
+		8E23F394253BC07300AA4893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E23F392253BC07300AA4893 /* Main.storyboard */; };
+		8E23F396253BC07400AA4893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E23F395253BC07400AA4893 /* Assets.xcassets */; };
+		8E23F3A1253BC07400AA4893 /* UnoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F3A0253BC07400AA4893 /* UnoTests.swift */; };
+		8E23F3C2253BC11400AA4893 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F3C1253BC11400AA4893 /* Card.swift */; };
+		8E23F3C7253BC13200AA4893 /* CardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F3C6253BC13200AA4893 /* CardColor.swift */; };
+		8E23F3CC253BC15D00AA4893 /* CardValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F3CB253BC15D00AA4893 /* CardValue.swift */; };
+		8E23F3D4253BC25E00AA4893 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F3D3253BC25E00AA4893 /* Player.swift */; };
+		8E23F3E1253BC2A800AA4893 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F3E0253BC2A800AA4893 /* Game.swift */; };
+		8E23F3F7253BC41E00AA4893 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F3F6253BC41E00AA4893 /* Stack.swift */; };
+		8E23F402253BC5D900AA4893 /* DeckGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F401253BC5D900AA4893 /* DeckGenerator.swift */; };
+		8E23F408253BC6A700AA4893 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F407253BC6A700AA4893 /* CardTests.swift */; };
+		8E23F411253BC82F00AA4893 /* DeckGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F410253BC82F00AA4893 /* DeckGeneratorTests.swift */; };
+		8E23F41F253C7E0100AA4893 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F41E253C7E0100AA4893 /* LinkedList.swift */; };
+		8E23F424253C7F0400AA4893 /* PlayersGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F423253C7F0400AA4893 /* PlayersGenerator.swift */; };
+		8E23F429253C803200AA4893 /* PlayersGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23F428253C803200AA4893 /* PlayersGeneratorTests.swift */; };
+		8E46A19A256214BC00431DCE /* UIColor+CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46A199256214BC00431DCE /* UIColor+CardTests.swift */; };
+		8E46A19E2562257900431DCE /* GameCanPlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46A19D2562257900431DCE /* GameCanPlayTests.swift */; };
+		8EB336DD2552ED45009E80E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336DC2552ED45009E80E8 /* Constants.swift */; };
+		8EB336E125539623009E80E8 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336E025539623009E80E8 /* CardNode.swift */; };
+		8EB336E5255EC285009E80E8 /* WildCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336E4255EC285009E80E8 /* WildCard.swift */; };
+		8EB336E9255EC60C009E80E8 /* WildColorSelectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336E8255EC60C009E80E8 /* WildColorSelectionNode.swift */; };
+		8EB336ED255EC750009E80E8 /* UIColor+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB336EC255EC750009E80E8 /* UIColor+Card.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E23F39D253BC07400AA4893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E23F37D253BC07300AA4893 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E23F384253BC07300AA4893;
+			remoteInfo = Uno;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E031AD52550742400871DAF /* Array+Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Cards.swift"; sourceTree = "<group>"; };
+		8E031ADA2550787D00871DAF /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		8E031ADF25507B6F00871DAF /* DeckGeneratorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckGeneratorHelper.swift; sourceTree = "<group>"; };
+		8E23F385253BC07300AA4893 /* Uno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E23F388253BC07300AA4893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E23F38A253BC07300AA4893 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		8E23F38C253BC07300AA4893 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		8E23F38E253BC07300AA4893 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8E23F390253BC07300AA4893 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8E23F393253BC07300AA4893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E23F395253BC07400AA4893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E23F397253BC07400AA4893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E23F39C253BC07400AA4893 /* UnoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E23F3A0253BC07400AA4893 /* UnoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnoTests.swift; sourceTree = "<group>"; };
+		8E23F3A2253BC07400AA4893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E23F3C1253BC11400AA4893 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8E23F3C6253BC13200AA4893 /* CardColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardColor.swift; sourceTree = "<group>"; };
+		8E23F3CB253BC15D00AA4893 /* CardValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValue.swift; sourceTree = "<group>"; };
+		8E23F3D3253BC25E00AA4893 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8E23F3E0253BC2A800AA4893 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8E23F3F6253BC41E00AA4893 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		8E23F401253BC5D900AA4893 /* DeckGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckGenerator.swift; sourceTree = "<group>"; };
+		8E23F407253BC6A700AA4893 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		8E23F410253BC82F00AA4893 /* DeckGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckGeneratorTests.swift; sourceTree = "<group>"; };
+		8E23F41E253C7E0100AA4893 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		8E23F423253C7F0400AA4893 /* PlayersGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersGenerator.swift; sourceTree = "<group>"; };
+		8E23F428253C803200AA4893 /* PlayersGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersGeneratorTests.swift; sourceTree = "<group>"; };
+		8E46A199256214BC00431DCE /* UIColor+CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CardTests.swift"; sourceTree = "<group>"; };
+		8E46A19D2562257900431DCE /* GameCanPlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCanPlayTests.swift; sourceTree = "<group>"; };
+		8EB336DC2552ED45009E80E8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8EB336E025539623009E80E8 /* CardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNode.swift; sourceTree = "<group>"; };
+		8EB336E4255EC285009E80E8 /* WildCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildCard.swift; sourceTree = "<group>"; };
+		8EB336E8255EC60C009E80E8 /* WildColorSelectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildColorSelectionNode.swift; sourceTree = "<group>"; };
+		8EB336EC255EC750009E80E8 /* UIColor+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Card.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E23F382253BC07300AA4893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E23F399253BC07400AA4893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E23F37C253BC07300AA4893 = {
+			isa = PBXGroup;
+			children = (
+				8E23F387253BC07300AA4893 /* Uno */,
+				8E23F39F253BC07400AA4893 /* UnoTests */,
+				8E23F386253BC07300AA4893 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E23F386253BC07300AA4893 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F385253BC07300AA4893 /* Uno.app */,
+				8E23F39C253BC07400AA4893 /* UnoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E23F387253BC07300AA4893 /* Uno */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F3F5253BC41000AA4893 /* Utilities */,
+				8E23F3C0253BC10700AA4893 /* Game */,
+				8E23F3BC253BC0F000AA4893 /* Game Scene */,
+				8E23F388253BC07300AA4893 /* AppDelegate.swift */,
+				8E23F38C253BC07300AA4893 /* Actions.sks */,
+				8E23F392253BC07300AA4893 /* Main.storyboard */,
+				8E23F395253BC07400AA4893 /* Assets.xcassets */,
+				8E23F397253BC07400AA4893 /* Info.plist */,
+				8EB336DC2552ED45009E80E8 /* Constants.swift */,
+			);
+			path = Uno;
+			sourceTree = "<group>";
+		};
+		8E23F39F253BC07400AA4893 /* UnoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F40F253BC82300AA4893 /* Utilities */,
+				8E23F406253BC69E00AA4893 /* Game */,
+				8E23F3A0253BC07400AA4893 /* UnoTests.swift */,
+				8E23F3A2253BC07400AA4893 /* Info.plist */,
+				8E031ADF25507B6F00871DAF /* DeckGeneratorHelper.swift */,
+			);
+			path = UnoTests;
+			sourceTree = "<group>";
+		};
+		8E23F3BC253BC0F000AA4893 /* Game Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F38A253BC07300AA4893 /* GameScene.sks */,
+				8E23F38E253BC07300AA4893 /* GameScene.swift */,
+				8E23F390253BC07300AA4893 /* GameViewController.swift */,
+				8EB336E025539623009E80E8 /* CardNode.swift */,
+				8EB336E8255EC60C009E80E8 /* WildColorSelectionNode.swift */,
+			);
+			path = "Game Scene";
+			sourceTree = "<group>";
+		};
+		8E23F3C0253BC10700AA4893 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F3C1253BC11400AA4893 /* Card.swift */,
+				8EB336E4255EC285009E80E8 /* WildCard.swift */,
+				8E23F3C6253BC13200AA4893 /* CardColor.swift */,
+				8E23F3CB253BC15D00AA4893 /* CardValue.swift */,
+				8E23F3E0253BC2A800AA4893 /* Game.swift */,
+				8E23F3D3253BC25E00AA4893 /* Player.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		8E23F3F5253BC41000AA4893 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F3F6253BC41E00AA4893 /* Stack.swift */,
+				8E23F41E253C7E0100AA4893 /* LinkedList.swift */,
+				8E23F401253BC5D900AA4893 /* DeckGenerator.swift */,
+				8E23F423253C7F0400AA4893 /* PlayersGenerator.swift */,
+				8E031AD52550742400871DAF /* Array+Cards.swift */,
+				8EB336EC255EC750009E80E8 /* UIColor+Card.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8E23F406253BC69E00AA4893 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F407253BC6A700AA4893 /* CardTests.swift */,
+				8E031ADA2550787D00871DAF /* GameTests.swift */,
+				8E46A19D2562257900431DCE /* GameCanPlayTests.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		8E23F40F253BC82300AA4893 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8E23F410253BC82F00AA4893 /* DeckGeneratorTests.swift */,
+				8E23F428253C803200AA4893 /* PlayersGeneratorTests.swift */,
+				8E46A199256214BC00431DCE /* UIColor+CardTests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E23F384253BC07300AA4893 /* Uno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E23F3B0253BC07500AA4893 /* Build configuration list for PBXNativeTarget "Uno" */;
+			buildPhases = (
+				8E23F381253BC07300AA4893 /* Sources */,
+				8E23F382253BC07300AA4893 /* Frameworks */,
+				8E23F383253BC07300AA4893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Uno;
+			productName = Uno;
+			productReference = 8E23F385253BC07300AA4893 /* Uno.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E23F39B253BC07400AA4893 /* UnoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E23F3B3253BC07500AA4893 /* Build configuration list for PBXNativeTarget "UnoTests" */;
+			buildPhases = (
+				8E23F398253BC07400AA4893 /* Sources */,
+				8E23F399253BC07400AA4893 /* Frameworks */,
+				8E23F39A253BC07400AA4893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E23F39E253BC07400AA4893 /* PBXTargetDependency */,
+			);
+			name = UnoTests;
+			productName = UnoTests;
+			productReference = 8E23F39C253BC07400AA4893 /* UnoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E23F37D253BC07300AA4893 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					8E23F384253BC07300AA4893 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					8E23F39B253BC07400AA4893 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 8E23F384253BC07300AA4893;
+					};
+				};
+			};
+			buildConfigurationList = 8E23F380253BC07300AA4893 /* Build configuration list for PBXProject "Uno" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E23F37C253BC07300AA4893;
+			productRefGroup = 8E23F386253BC07300AA4893 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E23F384253BC07300AA4893 /* Uno */,
+				8E23F39B253BC07400AA4893 /* UnoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E23F383253BC07300AA4893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E23F394253BC07300AA4893 /* Main.storyboard in Resources */,
+				8E23F38B253BC07300AA4893 /* GameScene.sks in Resources */,
+				8E23F396253BC07400AA4893 /* Assets.xcassets in Resources */,
+				8E23F38D253BC07300AA4893 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E23F39A253BC07400AA4893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E23F381253BC07300AA4893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E23F3E1253BC2A800AA4893 /* Game.swift in Sources */,
+				8E23F402253BC5D900AA4893 /* DeckGenerator.swift in Sources */,
+				8E23F38F253BC07300AA4893 /* GameScene.swift in Sources */,
+				8EB336ED255EC750009E80E8 /* UIColor+Card.swift in Sources */,
+				8EB336E5255EC285009E80E8 /* WildCard.swift in Sources */,
+				8E23F391253BC07300AA4893 /* GameViewController.swift in Sources */,
+				8E23F3F7253BC41E00AA4893 /* Stack.swift in Sources */,
+				8E23F389253BC07300AA4893 /* AppDelegate.swift in Sources */,
+				8E23F3C7253BC13200AA4893 /* CardColor.swift in Sources */,
+				8E031AD62550742400871DAF /* Array+Cards.swift in Sources */,
+				8E23F3D4253BC25E00AA4893 /* Player.swift in Sources */,
+				8E23F424253C7F0400AA4893 /* PlayersGenerator.swift in Sources */,
+				8EB336E9255EC60C009E80E8 /* WildColorSelectionNode.swift in Sources */,
+				8E23F3C2253BC11400AA4893 /* Card.swift in Sources */,
+				8EB336DD2552ED45009E80E8 /* Constants.swift in Sources */,
+				8EB336E125539623009E80E8 /* CardNode.swift in Sources */,
+				8E23F41F253C7E0100AA4893 /* LinkedList.swift in Sources */,
+				8E23F3CC253BC15D00AA4893 /* CardValue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E23F398253BC07400AA4893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E031AE025507B6F00871DAF /* DeckGeneratorHelper.swift in Sources */,
+				8E23F429253C803200AA4893 /* PlayersGeneratorTests.swift in Sources */,
+				8E46A19A256214BC00431DCE /* UIColor+CardTests.swift in Sources */,
+				8E23F411253BC82F00AA4893 /* DeckGeneratorTests.swift in Sources */,
+				8E23F3A1253BC07400AA4893 /* UnoTests.swift in Sources */,
+				8E23F408253BC6A700AA4893 /* CardTests.swift in Sources */,
+				8E46A19E2562257900431DCE /* GameCanPlayTests.swift in Sources */,
+				8E031ADB2550787D00871DAF /* GameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E23F39E253BC07400AA4893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E23F384253BC07300AA4893 /* Uno */;
+			targetProxy = 8E23F39D253BC07400AA4893 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E23F392253BC07300AA4893 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E23F393253BC07300AA4893 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E23F3AE253BC07500AA4893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E23F3AF253BC07500AA4893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E23F3B1253BC07500AA4893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QK8D5P7WR5;
+				INFOPLIST_FILE = Uno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultklein.Uno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E23F3B2253BC07500AA4893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QK8D5P7WR5;
+				INFOPLIST_FILE = Uno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultklein.Uno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E23F3B4253BC07500AA4893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QK8D5P7WR5;
+				INFOPLIST_FILE = UnoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultklein.UnoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uno.app/Uno";
+			};
+			name = Debug;
+		};
+		8E23F3B5253BC07500AA4893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QK8D5P7WR5;
+				INFOPLIST_FILE = UnoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thibaultklein.UnoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uno.app/Uno";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E23F380253BC07300AA4893 /* Build configuration list for PBXProject "Uno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E23F3AE253BC07500AA4893 /* Debug */,
+				8E23F3AF253BC07500AA4893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E23F3B0253BC07500AA4893 /* Build configuration list for PBXNativeTarget "Uno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E23F3B1253BC07500AA4893 /* Debug */,
+				8E23F3B2253BC07500AA4893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E23F3B3253BC07500AA4893 /* Build configuration list for PBXNativeTarget "UnoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E23F3B4253BC07500AA4893 /* Debug */,
+				8E23F3B5253BC07500AA4893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E23F37D253BC07300AA4893 /* Project object */;
+}
