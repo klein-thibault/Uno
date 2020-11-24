@@ -11,9 +11,9 @@ import XCTest
 final class PlayersGeneratorTests: XCTestCase {
     func testPlayersGenerator_createsPlayersRotation() {
         // given
-        let player1 = Player(name: "John", cards: [])
-        let player2 = Player(name: "Marc", cards: [])
-        let player3 = Player(name: "David", cards: [])
+        let player1 = Player(name: "John", number: 1, cards: [])
+        let player2 = Player(name: "Marc", number: 2, cards: [])
+        let player3 = Player(name: "David", number: 3, cards: [])
         // when
         let rotation = PlayersGenerator.generatePlayersRotation([player1, player2, player3])
         // then

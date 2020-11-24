@@ -10,9 +10,9 @@ import XCTest
 
 class GameTests: XCTestCase {
     let players = [
-        Player(name: "John", cards: []),
-        Player(name: "Marc", cards: []),
-        Player(name: "Catherine", cards: [])
+        Player(name: "John", number: 1, cards: []),
+        Player(name: "Marc", number: 2, cards: []),
+        Player(name: "Catherine", number: 3, cards: [])
     ]
 
     func testGame_generateGame() {

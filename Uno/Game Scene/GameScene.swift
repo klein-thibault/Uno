@@ -14,6 +14,10 @@ class GameScene: SKScene {
     let resetButton = SKLabelNode(text: "Reset")
     var game: Game!
     let gameplay = UnoGameplay()
+    let players = [
+        Player(name: "John", number: 1),
+        Player(name: "Marc", number: 2)
+    ]
     
     private var playerCardsNodes: [CardNode] = []
     private var colorSelectionNodes: [WildColorSelectionNode] = []
@@ -27,9 +31,10 @@ class GameScene: SKScene {
         
         renderPlayedCardsStack()
 
-        let player = game.players.first!.value
-        setupPlayerHand(player)
-        renderPlayerHand(player)
+        for player in players {
+            setupPlayerHand(player)
+            renderPlayerHand(player)
+        }
     }
     
     func touchDown(atPoint pos: CGPoint) {
@@ -110,7 +115,6 @@ class GameScene: SKScene {
     }
     
     private func setupGame() {
-        let players = [Player(name: "John"), Player(name: "Marc"), Player(name: "Alfred")]
         game = Game.generateGame(withPlayers: players)
         game.delegate = self
     }
@@ -127,12 +131,13 @@ class GameScene: SKScene {
         let numberOfCards = nodes.count
         let totalCardsWidth = CGFloat(numberOfCards) * Constants.Card.size.width
         var nextXPosition = -(totalCardsWidth / 2) + (Constants.Card.size.width / 2)
+        let yPosition: CGFloat = player.number == 1 ? -160 : 160
         
         for cardNode in nodes {
             if childNode(withName: cardNode.name!) == nil {
                 addChild(cardNode)
             }
-            cardNode.position = CGPoint(x: nextXPosition, y: -160)
+            cardNode.position = CGPoint(x: nextXPosition, y: yPosition)
             nextXPosition += cardNode.size.width
         }
     }
@@ -152,7 +157,8 @@ class GameScene: SKScene {
         var nextXPosition: CGFloat = -(CGFloat(colorSelectionNodes.count) / 2) + (Constants.ColorSelection.size.width / 2)
         for node in colorSelectionNodes {
             addChild(node)
-            node.position = CGPoint(x: nextXPosition, y: 160)
+            node.position = CGPoint(x: nextXPosition, y: 0)
+            node.zPosition = .greatestFiniteMagnitude
             nextXPosition += node.frame.size.width
         }
     }

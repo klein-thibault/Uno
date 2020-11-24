@@ -65,6 +65,7 @@ class Game {
 
         playedCardsStack.push(card)
         player.cards.removeCard(card)
+        _ = players.next()
 
         if player.isWinner {
             // FINISH GAME

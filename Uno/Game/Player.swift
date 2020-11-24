@@ -9,6 +9,7 @@ import Foundation
 
 class Player {
     let name: String
+    let number: Int
     var cards: [Card]
 
     var isUno: Bool {
@@ -19,8 +20,9 @@ class Player {
         return cards.isEmpty
     }
 
-    init(name: String, cards: [Card] = []) {
+    init(name: String, number: Int, cards: [Card] = []) {
         self.name = name
+        self.number = number
         self.cards = cards
     }
 }
