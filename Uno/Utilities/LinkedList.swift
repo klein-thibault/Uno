@@ -10,6 +10,7 @@ import Foundation
 final class Node<Element> {
     let value: Element
     var next: Node?
+    var previous: Node?
     
     init(value: Element) {
         self.value = value
@@ -37,6 +38,7 @@ final class LinkedList<Element> {
         let newNode = Node(value: element)
 
         if let tailNode = tail {
+            newNode.previous = tailNode
             tailNode.next = newNode
         } else {
             head = newNode
@@ -50,5 +52,11 @@ final class LinkedList<Element> {
         let next = current?.next
         current = next
         return next
+    }
+    
+    func previous() -> Node<Element>? {
+        let previous = current?.previous
+        current = previous
+        return previous
     }
 }

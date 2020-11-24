@@ -12,6 +12,7 @@ class GameScene: SKScene {
     let drawPile = SKSpriteNode(imageNamed: "Deck")
     let playedPile = SKSpriteNode()
     let resetButton = SKLabelNode(text: "Reset")
+    let skipTurnButton = SKLabelNode(text: "Pass")
     var game: Game!
     let gameplay = UnoGameplay()
     let players = [
@@ -46,6 +47,10 @@ class GameScene: SKScene {
 
         if touchedNode.name == resetButton.name {
             // reset game
+        }
+        
+        if touchedNode.name == skipTurnButton.name {
+            game.skipTurn()
         }
         
         if let playerCardNode = touchedCard(name: touchedNode.name) {
@@ -112,6 +117,10 @@ class GameScene: SKScene {
         addChild(resetButton)
         resetButton.position = CGPoint(x: 0, y: 160)
         resetButton.name = "Reset Button"
+        
+        addChild(skipTurnButton)
+        skipTurnButton.position = CGPoint(x: 240, y: 0)
+        skipTurnButton.name = "Skip Turn Button"
     }
     
     private func setupGame() {

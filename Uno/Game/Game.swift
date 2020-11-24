@@ -66,15 +66,16 @@ class Game {
         playedCardsStack.push(card)
         player.cards.removeCard(card)
         
-        if card.value == .skip {
+        switch card.value {
+        case .skip:
+            _ = players.next()
+            _ = players.next()
+        case .reverse:
+            // TODO: reverse linked list
+            break
+        default:
             _ = players.next()
         }
-        
-        if card.value == .reverse {
-            // TODO: implement previous player in linked list
-        }
-
-        _ = players.next()
 
         if player.isWinner {
             // FINISH GAME
@@ -86,6 +87,10 @@ class Game {
         }
 
         return true
+    }
+    
+    func skipTurn() {
+        _ = players.next()
     }
 
     func drawCard() -> Card {
