@@ -20,6 +20,9 @@ final class CardNode: SKSpriteNode {
         super.init(texture: SKTexture(imageNamed: card.imageName),
                    color: .clear,
                    size: Constants.Card.size)
+
+        // Generating a unique node name
+        self.name = "\(player.name) - \(card.description) - \(UUID().uuidString)"
     }
     
     required init?(coder aDecoder: NSCoder) {

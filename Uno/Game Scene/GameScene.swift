@@ -13,6 +13,7 @@ class GameScene: SKScene {
     let playedPile = SKSpriteNode()
     let resetButton = SKLabelNode(text: "Reset")
     var game: Game!
+    let gameplay = UnoGameplay()
     
     private var playerCardsNodes: [CardNode] = []
     private var colorSelectionNodes: [WildColorSelectionNode] = []
@@ -35,10 +36,7 @@ class GameScene: SKScene {
         let touchedNode = self.atPoint(pos)
         
         if touchedNode.name == drawPile.name {
-            // draw card
-            let newCard = game.drawCard()
-            game.playedCardsStack.push(newCard)
-            renderPlayedCardsStack()
+            drawCard()
         }
 
         if touchedNode.name == resetButton.name {
@@ -54,6 +52,7 @@ class GameScene: SKScene {
                 playerCardsNodes.removeCard(playerCardNode)
                 playerCardNode.removeFromParent()
                 renderPlayedCardsStack()
+                renderPlayerHand(player)
             }
         }
         
@@ -119,7 +118,6 @@ class GameScene: SKScene {
     private func setupPlayerHand(_ player: Player) {
         for card in player.cards {
             let cardNode = CardNode(card: card, player: player)
-            cardNode.name = "\(player.name) - \(card.description)"
             playerCardsNodes.append(cardNode)
         }
     }
@@ -131,7 +129,9 @@ class GameScene: SKScene {
         var nextXPosition = -(totalCardsWidth / 2) + (Constants.Card.size.width / 2)
         
         for cardNode in nodes {
-            addChild(cardNode)
+            if childNode(withName: cardNode.name!) == nil {
+                addChild(cardNode)
+            }
             cardNode.position = CGPoint(x: nextXPosition, y: -160)
             nextXPosition += cardNode.size.width
         }
@@ -165,6 +165,16 @@ class GameScene: SKScene {
     
     private func touchedColorSelection(name: String?) -> WildColorSelectionNode? {
         return colorSelectionNodes.first { $0.name == name }
+    }
+    
+    // MARK: - Action Functions
+    
+    func drawCard() {
+        let card = gameplay.drawCardFromPile(game: game)
+        let player = gameplay.addCardToPlayerHand(game: game, card: card)
+        let cardNode = CardNode(card: card, player: player)
+        playerCardsNodes.append(cardNode)
+        renderPlayerHand(player)
     }
 }
 
