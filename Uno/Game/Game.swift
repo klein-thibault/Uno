@@ -65,6 +65,15 @@ class Game {
 
         playedCardsStack.push(card)
         player.cards.removeCard(card)
+        
+        if card.value == .skip {
+            _ = players.next()
+        }
+        
+        if card.value == .reverse {
+            // TODO: implement previous player in linked list
+        }
+
         _ = players.next()
 
         if player.isWinner {
