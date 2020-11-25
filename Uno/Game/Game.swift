@@ -65,26 +65,14 @@ class Game {
 
         playedCardsStack.push(card)
         player.cards.removeCard(card)
+        handleSpecialCard(card)
         
-        switch card.value {
-        case .skip:
-            _ = players.next()
-            _ = players.next()
-        case .reverse:
-            // TODO: reverse linked list
-            break
-        default:
-            _ = players.next()
-        }
-
         if player.isWinner {
             // FINISH GAME
             print("Player \(player.name) won!")
         }
         
-        if let wildCard = card as? WildCard {
-            delegate?.askForWildCardColor(wildCard)
-        }
+        players.next()
 
         return true
     }
@@ -129,6 +117,25 @@ class Game {
     
     func isPlayerTurn(_ player: Player) -> Bool {
         return player == players.current?.value
+    }
+    
+    private func handleSpecialCard(_ card: Card) {
+        switch card.value {
+        case .skip:
+            players.next()
+        case .reverse:
+            players.reverse()
+        case .draw2:
+            break
+        case .draw4:
+            break
+        case .wild:
+            if let wildCard = card as? WildCard {
+                delegate?.askForWildCardColor(wildCard)
+            }
+        default:
+            break
+        }
     }
 
     // MARK: - Game Setup Functions

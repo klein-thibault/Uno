@@ -107,4 +107,42 @@ final class GamePlayCardTests: GameTests {
         XCTAssertNil(game.playedCardsStack.peek())
         XCTAssertEqual(player.cards.count, 3)
     }
+    
+    func testGame_playCard_skip_shouldSkipToPlayerAfterNext() {
+        // given
+        let player = players[0]
+        let card = Card(value: .skip, color: .blue)!
+        player.cards = [Card(value: .three, color: .red)!, card]
+        let unplayedCards = Stack<Card>()
+        let playedCards = Stack<Card>()
+        playedCards.push(Card(value: .three, color: .blue)!)
+        let game = Game(players: PlayersGenerator.generatePlayersRotation(players),
+                        unplayedCardsStack: unplayedCards,
+                        playedCardsStack: playedCards,
+                        currentRound: 1,
+                        numberOfPlayers: players.count)
+        // when
+        _ = game.play(player: player, card: card)
+        // then
+        XCTAssertEqual(game.players.current?.value.name, players[2].name)
+    }
+    
+    func testGame_playCard_reverse_shouldReversePlayersRotation() {
+        // given
+        let player = players[0]
+        let card = Card(value: .reverse, color: .blue)!
+        player.cards = [Card(value: .three, color: .red)!, card]
+        let unplayedCards = Stack<Card>()
+        let playedCards = Stack<Card>()
+        playedCards.push(Card(value: .three, color: .blue)!)
+        let game = Game(players: PlayersGenerator.generatePlayersRotation(players),
+                        unplayedCardsStack: unplayedCards,
+                        playedCardsStack: playedCards,
+                        currentRound: 1,
+                        numberOfPlayers: players.count)
+        // when
+        _ = game.play(player: player, card: card)
+        // then
+        XCTAssertEqual(game.players.current?.value.name, players[2].name)
+    }
 }

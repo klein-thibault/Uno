@@ -7,17 +7,16 @@
 
 import Foundation
 
-final class Node<Element> {
+final class Node<Element: Equatable> {
     let value: Element
     var next: Node?
-    var previous: Node?
     
     init(value: Element) {
         self.value = value
     }
 }
 
-final class LinkedList<Element> {
+final class LinkedList<Element: Equatable> {
     private var head: Node<Element>?
     private var tail: Node<Element>?
     var current: Node<Element>?
@@ -38,7 +37,6 @@ final class LinkedList<Element> {
         let newNode = Node(value: element)
 
         if let tailNode = tail {
-            newNode.previous = tailNode
             tailNode.next = newNode
         } else {
             head = newNode
@@ -48,15 +46,24 @@ final class LinkedList<Element> {
         tail = newNode
     }
 
+    @discardableResult
     func next() -> Node<Element>? {
         let next = current?.next
         current = next
         return next
     }
     
-    func previous() -> Node<Element>? {
-        let previous = current?.previous
-        current = previous
-        return previous
+    func reverse() {
+        let currentNode = current        
+        var head = currentNode
+        var previous: Node<Element>?
+        var next: Node<Element>?
+        while (head?.next != nil) || (head?.next?.value != head?.value) {
+            next = head?.next
+            head?.next = previous
+            previous = head
+            head = next
+        }
+        self.head = previous
     }
 }

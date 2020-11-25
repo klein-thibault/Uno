@@ -32,3 +32,9 @@ extension Player: Equatable {
         return lhs.name == rhs.name
     }
 }
+
+extension Player: CustomStringConvertible {
+    var description: String {
+        return "\(name)"
+    }
+}
