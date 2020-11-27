@@ -131,9 +131,7 @@ class GameScene: SKScene {
     private func setupPlayerHand(_ player: Player) {
         for card in player.cards {
             let cardNode = CardNode(card: card, player: player)
-            if !(playerCardsNodes.contains { $0.card == card }) {
-                playerCardsNodes.append(cardNode)
-            }
+            playerCardsNodes.append(cardNode)
         }
     }
     

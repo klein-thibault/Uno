@@ -164,11 +164,13 @@ class Game {
     private func deal() {
         var round = 0
 
-        while round != 7 {
+        while round < 7 {
             for _ in 1...numberOfPlayers {
-                let player = players.next()?.value
+                let player = players.current?.value
                 let card = drawCard()
                 player?.cards.append(card)
+                print("Player \(player!.name) got card \(card.description) during round \(round)")
+                players.next()
             }
             round += 1
         }
