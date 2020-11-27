@@ -115,7 +115,7 @@ class GameScene: SKScene {
     
     private func setupButtons() {
         addChild(resetButton)
-        resetButton.position = CGPoint(x: 0, y: 160)
+        resetButton.position = CGPoint(x: -240, y: 0)
         resetButton.name = "Reset Button"
         
         addChild(skipTurnButton)
@@ -131,7 +131,9 @@ class GameScene: SKScene {
     private func setupPlayerHand(_ player: Player) {
         for card in player.cards {
             let cardNode = CardNode(card: card, player: player)
-            playerCardsNodes.append(cardNode)
+            if !(playerCardsNodes.contains { $0.card == card }) {
+                playerCardsNodes.append(cardNode)
+            }
         }
     }
     
@@ -197,5 +199,10 @@ class GameScene: SKScene {
 extension GameScene: GameDelegate {
     func askForWildCardColor(_ wildCard: WildCard) {
         renderWildCardColorSelectionButtons(wildCard: wildCard)
+    }
+    
+    func renderPlayerCards(_ player: Player) {
+        setupPlayerHand(player)
+        renderPlayerHand(player)
     }
 }

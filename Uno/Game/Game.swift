@@ -9,6 +9,7 @@ import Foundation
 
 protocol GameDelegate: AnyObject {
     func askForWildCardColor(_ wildCard: WildCard)
+    func renderPlayerCards(_ player: Player)
 }
 
 class Game {
@@ -124,9 +125,19 @@ class Game {
         case .skip:
             players.next()
         case .reverse:
-            players.reverse()
+            if numberOfPlayers > 2 {
+                players.reverse()
+            } else {
+                players.next()
+            }
         case .draw2:
-            break
+            let card1 = drawCard()
+            let card2 = drawCard()
+            if let nextPlayer = players.current?.next?.value {
+                nextPlayer.cards.append(contentsOf: [card1, card2])
+                delegate?.renderPlayerCards(nextPlayer)
+            }
+            players.next()
         case .draw4:
             break
         case .wild:

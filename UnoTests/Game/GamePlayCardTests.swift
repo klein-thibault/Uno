@@ -140,9 +140,42 @@ final class GamePlayCardTests: GameTests {
                         playedCardsStack: playedCards,
                         currentRound: 1,
                         numberOfPlayers: players.count)
+        print("BEFORE")
+        game.players.printList(head: game.players.current)
         // when
         _ = game.play(player: player, card: card)
+        print("AFTER")
+        game.players.printList(head: game.players.current)
         // then
         XCTAssertEqual(game.players.current?.value.name, players[2].name)
+        XCTAssertEqual(game.players.current?.next?.value.name, players[1].name)
+    }
+    
+    func testGame_playCard_reverse_shouldReversePlayersRotation_2Players() {
+        // given
+        let players = [
+            Player(name: "John", number: 1, cards: []),
+            Player(name: "Marc", number: 2, cards: []),
+        ]
+        let player = players[0]
+        let card = Card(value: .reverse, color: .blue)!
+        player.cards = [Card(value: .three, color: .red)!, card]
+        let unplayedCards = Stack<Card>()
+        let playedCards = Stack<Card>()
+        playedCards.push(Card(value: .three, color: .blue)!)
+        let game = Game(players: PlayersGenerator.generatePlayersRotation(players),
+                        unplayedCardsStack: unplayedCards,
+                        playedCardsStack: playedCards,
+                        currentRound: 1,
+                        numberOfPlayers: players.count)
+        print("BEFORE")
+        game.players.printList(head: game.players.current)
+        // when
+        _ = game.play(player: player, card: card)
+        print("AFTER")
+        game.players.printList(head: game.players.current)
+        // then
+        XCTAssertEqual(game.players.current?.value.name, players[0].name)
+        XCTAssertEqual(game.players.current?.next?.value.name, players[1].name)
     }
 }

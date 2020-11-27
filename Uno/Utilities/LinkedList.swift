@@ -54,16 +54,40 @@ final class LinkedList<Element: Equatable> {
     }
     
     func reverse() {
-        let currentNode = current        
-        var head = currentNode
-        var previous: Node<Element>?
-        var next: Node<Element>?
-        while (head?.next != nil) || (head?.next?.value != head?.value) {
-            next = head?.next
-            head?.next = previous
-            previous = head
-            head = next
+        guard !isEmpty else {
+            return
         }
+
+        let headReference = current
+        var current = headReference
+        var previous: Node<Element>?
+        var next = current?.next
+        current?.next = previous
+        previous = current
+        current = next
+        while (current?.value != headReference?.value) {
+            next = current?.next
+            current?.next = previous
+            previous = current
+            current = next
+        }
+        self.head?.next = previous
         self.head = previous
+    }
+}
+
+extension LinkedList {
+    func printList(head: Node<Element>?) {
+        guard !isEmpty else {
+            return
+        }
+
+        var current = head
+        print(current!.value)
+        current = current?.next
+        while current?.value != head?.value {
+            print(current!.value)
+            current = current?.next
+        }
     }
 }
